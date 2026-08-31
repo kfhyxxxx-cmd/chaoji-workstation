@@ -9,7 +9,6 @@ assets/library/
 output/
 
 # 数据库/缓存
-data/api_providers.json
 data/canvases/
 data/conversations/
 data/media_previews/
