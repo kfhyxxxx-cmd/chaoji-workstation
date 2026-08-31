@@ -1,0 +1,30 @@
+# API 密钥 - 绝对不能上传
+API/.env
+
+# 生成的图片/视频（太大）
+assets/output/
+assets/input/
+assets/uploads/
+assets/library/
+output/
+
+# 数据库/缓存
+data/canvases/
+data/conversations/
+data/media_previews/
+data/update_backups/
+data/update_staging/
+
+# 日志
+logs/
+_self_restart.log
+*.log
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 系统文件
+Thumbs.db
+.DS_Store

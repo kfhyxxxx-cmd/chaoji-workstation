@@ -1,0 +1,88 @@
+{
+  "title": "custom/图片生成",
+  "fields": [
+    {
+      "id": "f_0ofru6e",
+      "node": "3",
+      "input": "text",
+      "name": "提示词文本",
+      "type": "textarea",
+      "default": "",
+      "min": null,
+      "max": null,
+      "step": null,
+      "options": [],
+      "random_enabled": false
+    },
+    {
+      "id": "f_kyqq08n",
+      "node": "4",
+      "input": "text",
+      "name": "提示词文本",
+      "type": "textarea",
+      "default": "",
+      "min": null,
+      "max": null,
+      "step": null,
+      "options": [],
+      "random_enabled": false
+    },
+    {
+      "id": "f_2mo61zu",
+      "node": "5",
+      "input": "width",
+      "name": "宽度",
+      "type": "number",
+      "default": 768,
+      "min": 0.0,
+      "max": 1536.0,
+      "step": 1.0,
+      "options": [],
+      "random_enabled": false
+    },
+    {
+      "id": "f_zz1r8ti",
+      "node": "5",
+      "input": "height",
+      "name": "高度",
+      "type": "number",
+      "default": 1280,
+      "min": 0.0,
+      "max": 2560.0,
+      "step": 1.0,
+      "options": [],
+      "random_enabled": false
+    },
+    {
+      "id": "f_kfi2qsv",
+      "node": "5",
+      "input": "batch_size",
+      "name": "批量大小",
+      "type": "number",
+      "default": 1,
+      "min": 0.0,
+      "max": 10.0,
+      "step": 0.1,
+      "options": [],
+      "random_enabled": false
+    }
+  ],
+  "mini_cards": {
+    "prompt": {
+      "x": 24,
+      "y": 30
+    },
+    "image": {
+      "x": 24,
+      "y": 210
+    },
+    "custom": {
+      "x": 280,
+      "y": 78
+    },
+    "output": {
+      "x": 540,
+      "y": 120
+    }
+  }
+}

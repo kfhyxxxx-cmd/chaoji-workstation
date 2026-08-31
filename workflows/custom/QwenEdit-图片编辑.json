@@ -1,0 +1,197 @@
+{
+  "2": {
+    "inputs": {
+      "prompt": "",
+      "clip": [
+        "6",
+        0
+      ],
+      "vae": [
+        "9",
+        0
+      ],
+      "image1": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "4": {
+    "inputs": {
+      "seed": 646821984403914,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "19",
+        0
+      ],
+      "positive": [
+        "2",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "5": {
+    "inputs": {
+      "prompt": "水印、崩坏、画质模糊",
+      "clip": [
+        "6",
+        0
+      ],
+      "vae": [
+        "9",
+        0
+      ],
+      "image1": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "_meta": {
+      "title": "文本编码（QwenImageEditPlus）"
+    }
+  },
+  "6": {
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "7": {
+    "inputs": {
+      "shift": 3,
+      "model": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "采样算法（AuraFlow）"
+    }
+  },
+  "8": {
+    "inputs": {
+      "width": 1280,
+      "height": 1280,
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "9": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "10": {
+    "inputs": {
+      "image": "4bba5157a052244312b0cb07d14cb8ef97dc13023c552-LKrHqn_fw1200.jfif"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "12": {
+    "inputs": {
+      "samples": [
+        "4",
+        0
+      ],
+      "vae": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "15": {
+    "inputs": {
+      "model_name": "qwen models\\qwen_image_edit_2511_bf16.safetensors",
+      "weight_dtype": "default",
+      "compute_dtype": "default",
+      "patch_cublaslinear": false,
+      "sage_attention": "disabled",
+      "enable_fp16_accumulation": false
+    },
+    "class_type": "DiffusionModelLoaderKJ",
+    "_meta": {
+      "title": "Diffusion Model Loader KJ"
+    }
+  },
+  "17": {
+    "inputs": {
+      "lora_name": "Qwen-Image-Lightning-4steps-V1.0.safetensors",
+      "strength_model": 1,
+      "model": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "19": {
+    "inputs": {
+      "strength": 1,
+      "pre_cfg": false,
+      "model": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "CFGNorm",
+    "_meta": {
+      "title": "CFG归一化"
+    }
+  },
+  "23": {
+    "inputs": {
+      "images": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  }
+}

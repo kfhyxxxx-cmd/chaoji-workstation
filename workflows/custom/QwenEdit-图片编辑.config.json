@@ -1,0 +1,88 @@
+{
+  "title": "custom/QwenEdit-图片编辑",
+  "fields": [
+    {
+      "id": "f_360v5z1",
+      "node": "10",
+      "input": "image",
+      "name": "图片",
+      "type": "image",
+      "default": "4bba5157a052244312b0cb07d14cb8ef97dc13023c552-LKrHqn_fw1200.jfif",
+      "min": null,
+      "max": null,
+      "step": null,
+      "options": [],
+      "random_enabled": false
+    },
+    {
+      "id": "f_iww14y2",
+      "node": "2",
+      "input": "prompt",
+      "name": "提示词",
+      "type": "textarea",
+      "default": "",
+      "min": null,
+      "max": null,
+      "step": null,
+      "options": [],
+      "random_enabled": false
+    },
+    {
+      "id": "f_yh7ztar",
+      "node": "8",
+      "input": "width",
+      "name": "宽度",
+      "type": "number",
+      "default": 1280,
+      "min": 0.0,
+      "max": 2560.0,
+      "step": 1.0,
+      "options": [],
+      "random_enabled": false
+    },
+    {
+      "id": "f_8xdu7sq",
+      "node": "8",
+      "input": "height",
+      "name": "高度",
+      "type": "number",
+      "default": 1280,
+      "min": 0.0,
+      "max": 2560.0,
+      "step": 1.0,
+      "options": [],
+      "random_enabled": false
+    },
+    {
+      "id": "f_v8xypkk",
+      "node": "8",
+      "input": "batch_size",
+      "name": "批量大小",
+      "type": "number",
+      "default": 1,
+      "min": 0.0,
+      "max": 10.0,
+      "step": 0.1,
+      "options": [],
+      "random_enabled": false
+    }
+  ],
+  "mini_cards": {
+    "prompt": {
+      "x": 24,
+      "y": 30
+    },
+    "image": {
+      "x": 24,
+      "y": 210
+    },
+    "custom": {
+      "x": 280,
+      "y": 78
+    },
+    "output": {
+      "x": 540,
+      "y": 120
+    }
+  }
+}

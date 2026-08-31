@@ -1,0 +1,1275 @@
+{
+  "active_library_id": "default",
+  "libraries": [
+    {
+      "id": "default",
+      "name": "默认资产库",
+      "type": "asset",
+      "categories": [
+        {
+          "id": "characters",
+          "name": "角色",
+          "type": "image",
+          "items": [
+            {
+              "id": "asset_d95a280300e7",
+              "name": "online_83fd92a919",
+              "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_1a48a9ecdd2f_online_83fd92a919.jpg",
+              "kind": "image",
+              "created_at": 1787987109763,
+              "registrations": {},
+              "classification": {
+                "summary": "现代简约风格的客厅空间，自然光线下木质家具与布艺沙发组合",
+                "categories": {
+                  "environment": [
+                    "室内",
+                    "自然"
+                  ],
+                  "scene": [
+                    "客厅",
+                    "室内"
+                  ],
+                  "space": [
+                    "客厅"
+                  ],
+                  "subject": [
+                    "家具",
+                    "室内设计"
+                  ],
+                  "model": [
+                    "无人"
+                  ],
+                  "people": [
+                    "无人"
+                  ],
+                  "style": [
+                    "现代",
+                    "写实",
+                    "极简"
+                  ],
+                  "lighting": [
+                    "自然光",
+                    "柔光"
+                  ],
+                  "color": [
+                    "暖色",
+                    "低饱和"
+                  ],
+                  "composition": [
+                    "中景",
+                    "居中",
+                    "对称"
+                  ],
+                  "mood": [
+                    "温馨",
+                    "自然",
+                    "高级"
+                  ],
+                  "use_case": [
+                    "电商主图",
+                    "空间参考",
+                    "室内设计"
+                  ],
+                  "objects": [
+                    "布艺沙发",
+                    "木质茶几",
+                    "落地灯",
+                    "绿植"
+                  ],
+                  "materials": [
+                    "木材",
+                    "布料",
+                    "金属"
+                  ],
+                  "quality": [
+                    "高清"
+                  ]
+                },
+                "tags": [
+                  "现代客厅",
+                  "木质家具",
+                  "布艺沙发",
+                  "自然采光",
+                  "极简主义",
+                  "室内设计",
+                  "暖色调",
+                  "家居装饰",
+                  "空间布局",
+                  "软装搭配"
+                ],
+                "flat": [],
+                "updated_at": 1788143343049,
+                "model": "Qwen/Qwen3-235B-A22B",
+                "provider": "modelscope"
+              }
+            },
+            {
+              "id": "asset_9108102cc64a",
+              "name": "online_71adee0af0",
+              "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_6105a191f9d9_online_71adee0af0.jpg",
+              "kind": "image",
+              "created_at": 1787987107486,
+              "registrations": {},
+              "classification": {
+                "summary": "现代风格卧室环境中的双人床场景",
+                "categories": {
+                  "environment": [
+                    "室内"
+                  ],
+                  "scene": [
+                    "卧室"
+                  ],
+                  "space": [
+                    "卧室"
+                  ],
+                  "subject": [
+                    "家具"
+                  ],
+                  "model": [
+                    "无人"
+                  ],
+                  "people": [
+                    "无人"
+                  ],
+                  "style": [
+                    "现代"
+                  ],
+                  "lighting": [
+                    "自然光"
+                  ],
+                  "color": [
+                    "暖色"
+                  ],
+                  "composition": [
+                    "近景"
+                  ],
+                  "mood": [
+                    "温馨"
+                  ],
+                  "use_case": [
+                    "电商主图",
+                    "空间参考"
+                  ],
+                  "objects": [
+                    "双人床",
+                    "床头柜",
+                    "台灯",
+                    "抱枕"
+                  ],
+                  "materials": [
+                    "木材",
+                    "布料"
+                  ],
+                  "quality": [
+                    "高清"
+                  ]
+                },
+                "tags": [
+                  "现代卧室",
+                  "双人床",
+                  "自然光",
+                  "温馨氛围",
+                  "空间参考",
+                  "家具展示",
+                  "室内场景",
+                  "床头柜",
+                  "暖色调",
+                  "高清素材"
+                ],
+                "flat": [],
+                "updated_at": 1788143355167,
+                "model": "Qwen/Qwen3-235B-A22B",
+                "provider": "modelscope"
+              }
+            },
+            {
+              "id": "asset_20da3f5acffc",
+              "name": "微信图片_2026-08-29_102349_836",
+              "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_bb914712b5f7_%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-08-29_102349_836.png",
+              "kind": "image",
+              "created_at": 1787971190076,
+              "registrations": {},
+              "classification": {
+                "summary": "现代风格客厅环境中的家具展示",
+                "categories": {
+                  "environment": [
+                    "室内",
+                    "自然"
+                  ],
+                  "scene": [
+                    "室内",
+                    "客厅"
+                  ],
+                  "space": [
+                    "客厅"
+                  ],
+                  "subject": [
+                    "家具",
+                    "植物"
+                  ],
+                  "model": [
+                    "无人"
+                  ],
+                  "people": [
+                    "无人"
+                  ],
+                  "style": [
+                    "现代",
+                    "极简"
+                  ],
+                  "lighting": [
+                    "自然光"
+                  ],
+                  "color": [
+                    "暖色",
+                    "白色"
+                  ],
+                  "composition": [
+                    "近景",
+                    "居中"
+                  ],
+                  "mood": [
+                    "自然",
+                    "温馨"
+                  ],
+                  "use_case": [
+                    "广告",
+                    "参考图"
+                  ],
+                  "objects": [
+                    "沙发",
+                    "茶几",
+                    "绿植",
+                    "落地灯"
+                  ],
+                  "materials": [
+                    "木材",
+                    "布料"
+                  ],
+                  "quality": [
+                    "高清"
+                  ]
+                },
+                "tags": [
+                  "现代客厅",
+                  "自然光",
+                  "家具展示",
+                  "极简风格",
+                  "绿植装饰",
+                  "高清素材",
+                  "室内空间",
+                  "家居广告",
+                  "布艺沙发",
+                  "木质茶几"
+                ],
+                "flat": [],
+                "updated_at": 1788143371460,
+                "model": "Qwen/Qwen3-235B-A22B",
+                "provider": "modelscope"
+              }
+            },
+            {
+              "id": "asset_c54aaa8579d8",
+              "name": "微信图片_2026-08-29_095519_311",
+              "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_7df2299d8409_%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-08-29_095519_311.png",
+              "kind": "image",
+              "created_at": 1787971187967,
+              "registrations": {},
+              "classification": {
+                "summary": "现代风格客厅全景展示",
+                "categories": {
+                  "environment": [
+                    "室内"
+                  ],
+                  "scene": [
+                    "室内"
+                  ],
+                  "space": [
+                    "客厅"
+                  ],
+                  "subject": [
+                    "家具",
+                    "植物"
+                  ],
+                  "model": [
+                    "无人"
+                  ],
+                  "people": [
+                    "无人"
+                  ],
+                  "style": [
+                    "现代",
+                    "写实"
+                  ],
+                  "lighting": [
+                    "自然光"
+                  ],
+                  "color": [
+                    "暖色",
+                    "高饱和"
+                  ],
+                  "composition": [
+                    "中景",
+                    "居中"
+                  ],
+                  "mood": [
+                    "温馨",
+                    "自然"
+                  ],
+                  "use_case": [
+                    "广告",
+                    "空间参考"
+                  ],
+                  "objects": [
+                    "布艺沙发",
+                    "木质茶几",
+                    "绿植盆栽",
+                    "落地灯"
+                  ],
+                  "materials": [
+                    "木材",
+                    "布料",
+                    "陶瓷"
+                  ],
+                  "quality": [
+                    "高清"
+                  ]
+                },
+                "tags": [
+                  "现代客厅",
+                  "自然光效",
+                  "温馨氛围",
+                  "家居广告",
+                  "布艺沙发",
+                  "木质家具",
+                  "绿植装饰",
+                  "中景构图",
+                  "暖色调",
+                  "高清素材",
+                  "空间参考图",
+                  "室内设计",
+                  "陶瓷花瓶",
+                  "落地灯具",
+                  "极简装饰",
+                  "生活场景",
+                  "家具陈列",
+                  "家居摄影",
+                  "全景视角",
+                  "现代风格"
+                ],
+                "flat": [],
+                "updated_at": 1788143389164,
+                "model": "Qwen/Qwen3-235B-A22B",
+                "provider": "modelscope"
+              }
+            },
+            {
+              "id": "asset_a5d3e3811bd9",
+              "name": "ComfyUI_temp_tqgdu_00002_",
+              "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_547bb677162c_ComfyUI_temp_tqgdu_00002_.png",
+              "kind": "image",
+              "created_at": 1787715647486,
+              "registrations": {},
+              "classification": {
+                "summary": "现代风格客厅场景展示",
+                "categories": {
+                  "environment": [
+                    "室内"
+                  ],
+                  "scene": [
+                    "客厅"
+                  ],
+                  "space": [
+                    "客厅"
+                  ],
+                  "subject": [
+                    "家具",
+                    "室内设计"
+                  ],
+                  "model": [
+                    "无人"
+                  ],
+                  "people": [
+                    "无人"
+                  ],
+                  "style": [
+                    "现代",
+                    "极简"
+                  ],
+                  "lighting": [
+                    "自然光"
+                  ],
+                  "color": [
+                    "莫兰迪",
+                    "低饱和"
+                  ],
+                  "composition": [
+                    "中景",
+                    "居中"
+                  ],
+                  "mood": [
+                    "温馨",
+                    "高级"
+                  ],
+                  "use_case": [
+                    "广告",
+                    "空间参考"
+                  ],
+                  "objects": [
+                    "沙发",
+                    "茶几",
+                    "落地灯",
+                    "装饰画"
+                  ],
+                  "materials": [
+                    "木材",
+                    "布料",
+                    "玻璃"
+                  ],
+                  "quality": [
+                    "高清"
+                  ]
+                },
+                "tags": [
+                  "现代客厅",
+                  "极简风格",
+                  "自然光照明",
+                  "莫兰迪色调",
+                  "家具展示",
+                  "空间布局",
+                  "高清素材",
+                  "室内设计参考",
+                  "木质材质",
+                  "布艺沙发"
+                ],
+                "flat": [],
+                "updated_at": 1788143404422,
+                "model": "Qwen/Qwen3-235B-A22B",
+                "provider": "modelscope"
+              }
+            },
+            {
+              "id": "asset_893f67ed0e81",
+              "name": "ComfyUI_temp_mmdey_00002_",
+              "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_a56ccb6822f7_ComfyUI_temp_mmdey_00002_.png",
+              "kind": "image",
+              "created_at": 1787712004437,
+              "registrations": {},
+              "classification": {
+                "summary": "现代风格客厅全景展示",
+                "categories": {
+                  "environment": [
+                    "室内"
+                  ],
+                  "scene": [
+                    "室内"
+                  ],
+                  "space": [
+                    "客厅"
+                  ],
+                  "subject": [
+                    "家具"
+                  ],
+                  "model": [
+                    "无人"
+                  ],
+                  "people": [
+                    "无人"
+                  ],
+                  "style": [
+                    "现代"
+                  ],
+                  "lighting": [
+                    "自然光"
+                  ],
+                  "color": [
+                    "暖色"
+                  ],
+                  "composition": [
+                    "远景"
+                  ],
+                  "mood": [
+                    "温馨"
+                  ],
+                  "use_case": [
+                    "电商主图"
+                  ],
+                  "objects": [
+                    "沙发",
+                    "茶几",
+                    "电视柜",
+                    "绿植"
+                  ],
+                  "materials": [
+                    "木材",
+                    "布料"
+                  ],
+                  "quality": [
+                    "高清"
+                  ]
+                },
+                "tags": [
+                  "现代客厅",
+                  "暖色调",
+                  "自然光",
+                  "沙发组合",
+                  "木质家具",
+                  "布艺材质",
+                  "全景构图",
+                  "电商素材",
+                  "家居装饰",
+                  "高清图片"
+                ],
+                "flat": [],
+                "updated_at": 1788143429572,
+                "model": "Qwen/Qwen3-235B-A22B",
+                "provider": "modelscope"
+              }
+            },
+            {
+              "id": "asset_7d61933f8d6a",
+              "name": "online_ef4fe75359",
+              "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_529bfdf731c4_online_ef4fe75359.jpg",
+              "kind": "image",
+              "created_at": 1787302868992,
+              "registrations": {},
+              "classification": {
+                "summary": "现代风格客厅空间展示",
+                "categories": {
+                  "environment": [
+                    "室内",
+                    "商业空间"
+                  ],
+                  "scene": [
+                    "客厅",
+                    "室内"
+                  ],
+                  "space": [
+                    "客厅",
+                    "商业空间"
+                  ],
+                  "subject": [
+                    "家具",
+                    "室内空间"
+                  ],
+                  "model": [
+                    "无人"
+                  ],
+                  "people": [
+                    "无人"
+                  ],
+                  "style": [
+                    "现代",
+                    "写实",
+                    "电商"
+                  ],
+                  "lighting": [
+                    "自然光",
+                    "柔光"
+                  ],
+                  "color": [
+                    "暖色",
+                    "莫兰迪"
+                  ],
+                  "composition": [
+                    "中景",
+                    "居中",
+                    "对称"
+                  ],
+                  "mood": [
+                    "温馨",
+                    "高级",
+                    "自然"
+                  ],
+                  "use_case": [
+                    "空间参考",
+                    "电商主图",
+                    "背景"
+                  ],
+                  "objects": [
+                    "沙发",
+                    "茶几",
+                    "电视柜",
+                    "绿植",
+                    "挂画"
+                  ],
+                  "materials": [
+                    "布料",
+                    "木材",
+                    "玻璃"
+                  ],
+                  "quality": [
+                    "高清"
+                  ]
+                },
+                "tags": [
+                  "现代客厅",
+                  "北欧风格",
+                  "家居空间",
+                  "沙发组合",
+                  "自然采光",
+                  "商业拍摄",
+                  "电商素材",
+                  "空间布局",
+                  "软装搭配",
+                  "室内设计"
+                ],
+                "flat": [],
+                "updated_at": 1788143417982,
+                "model": "Qwen/Qwen3-235B-A22B",
+                "provider": "modelscope"
+              }
+            }
+          ],
+          "dir": "角色"
+        },
+        {
+          "id": "scenes",
+          "name": "场景",
+          "type": "image",
+          "items": [],
+          "dir": "场景"
+        },
+        {
+          "id": "workflows",
+          "name": "工作流",
+          "type": "workflow",
+          "items": []
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "characters",
+      "name": "角色",
+      "type": "image",
+      "items": [
+        {
+          "id": "asset_d95a280300e7",
+          "name": "online_83fd92a919",
+          "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_1a48a9ecdd2f_online_83fd92a919.jpg",
+          "kind": "image",
+          "created_at": 1787987109763,
+          "registrations": {},
+          "classification": {
+            "summary": "现代简约风格的客厅空间，自然光线下木质家具与布艺沙发组合",
+            "categories": {
+              "environment": [
+                "室内",
+                "自然"
+              ],
+              "scene": [
+                "客厅",
+                "室内"
+              ],
+              "space": [
+                "客厅"
+              ],
+              "subject": [
+                "家具",
+                "室内设计"
+              ],
+              "model": [
+                "无人"
+              ],
+              "people": [
+                "无人"
+              ],
+              "style": [
+                "现代",
+                "写实",
+                "极简"
+              ],
+              "lighting": [
+                "自然光",
+                "柔光"
+              ],
+              "color": [
+                "暖色",
+                "低饱和"
+              ],
+              "composition": [
+                "中景",
+                "居中",
+                "对称"
+              ],
+              "mood": [
+                "温馨",
+                "自然",
+                "高级"
+              ],
+              "use_case": [
+                "电商主图",
+                "空间参考",
+                "室内设计"
+              ],
+              "objects": [
+                "布艺沙发",
+                "木质茶几",
+                "落地灯",
+                "绿植"
+              ],
+              "materials": [
+                "木材",
+                "布料",
+                "金属"
+              ],
+              "quality": [
+                "高清"
+              ]
+            },
+            "tags": [
+              "现代客厅",
+              "木质家具",
+              "布艺沙发",
+              "自然采光",
+              "极简主义",
+              "室内设计",
+              "暖色调",
+              "家居装饰",
+              "空间布局",
+              "软装搭配"
+            ],
+            "flat": [],
+            "updated_at": 1788143343049,
+            "model": "Qwen/Qwen3-235B-A22B",
+            "provider": "modelscope"
+          }
+        },
+        {
+          "id": "asset_9108102cc64a",
+          "name": "online_71adee0af0",
+          "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_6105a191f9d9_online_71adee0af0.jpg",
+          "kind": "image",
+          "created_at": 1787987107486,
+          "registrations": {},
+          "classification": {
+            "summary": "现代风格卧室环境中的双人床场景",
+            "categories": {
+              "environment": [
+                "室内"
+              ],
+              "scene": [
+                "卧室"
+              ],
+              "space": [
+                "卧室"
+              ],
+              "subject": [
+                "家具"
+              ],
+              "model": [
+                "无人"
+              ],
+              "people": [
+                "无人"
+              ],
+              "style": [
+                "现代"
+              ],
+              "lighting": [
+                "自然光"
+              ],
+              "color": [
+                "暖色"
+              ],
+              "composition": [
+                "近景"
+              ],
+              "mood": [
+                "温馨"
+              ],
+              "use_case": [
+                "电商主图",
+                "空间参考"
+              ],
+              "objects": [
+                "双人床",
+                "床头柜",
+                "台灯",
+                "抱枕"
+              ],
+              "materials": [
+                "木材",
+                "布料"
+              ],
+              "quality": [
+                "高清"
+              ]
+            },
+            "tags": [
+              "现代卧室",
+              "双人床",
+              "自然光",
+              "温馨氛围",
+              "空间参考",
+              "家具展示",
+              "室内场景",
+              "床头柜",
+              "暖色调",
+              "高清素材"
+            ],
+            "flat": [],
+            "updated_at": 1788143355167,
+            "model": "Qwen/Qwen3-235B-A22B",
+            "provider": "modelscope"
+          }
+        },
+        {
+          "id": "asset_20da3f5acffc",
+          "name": "微信图片_2026-08-29_102349_836",
+          "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_bb914712b5f7_%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-08-29_102349_836.png",
+          "kind": "image",
+          "created_at": 1787971190076,
+          "registrations": {},
+          "classification": {
+            "summary": "现代风格客厅环境中的家具展示",
+            "categories": {
+              "environment": [
+                "室内",
+                "自然"
+              ],
+              "scene": [
+                "室内",
+                "客厅"
+              ],
+              "space": [
+                "客厅"
+              ],
+              "subject": [
+                "家具",
+                "植物"
+              ],
+              "model": [
+                "无人"
+              ],
+              "people": [
+                "无人"
+              ],
+              "style": [
+                "现代",
+                "极简"
+              ],
+              "lighting": [
+                "自然光"
+              ],
+              "color": [
+                "暖色",
+                "白色"
+              ],
+              "composition": [
+                "近景",
+                "居中"
+              ],
+              "mood": [
+                "自然",
+                "温馨"
+              ],
+              "use_case": [
+                "广告",
+                "参考图"
+              ],
+              "objects": [
+                "沙发",
+                "茶几",
+                "绿植",
+                "落地灯"
+              ],
+              "materials": [
+                "木材",
+                "布料"
+              ],
+              "quality": [
+                "高清"
+              ]
+            },
+            "tags": [
+              "现代客厅",
+              "自然光",
+              "家具展示",
+              "极简风格",
+              "绿植装饰",
+              "高清素材",
+              "室内空间",
+              "家居广告",
+              "布艺沙发",
+              "木质茶几"
+            ],
+            "flat": [],
+            "updated_at": 1788143371460,
+            "model": "Qwen/Qwen3-235B-A22B",
+            "provider": "modelscope"
+          }
+        },
+        {
+          "id": "asset_c54aaa8579d8",
+          "name": "微信图片_2026-08-29_095519_311",
+          "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_7df2299d8409_%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_2026-08-29_095519_311.png",
+          "kind": "image",
+          "created_at": 1787971187967,
+          "registrations": {},
+          "classification": {
+            "summary": "现代风格客厅全景展示",
+            "categories": {
+              "environment": [
+                "室内"
+              ],
+              "scene": [
+                "室内"
+              ],
+              "space": [
+                "客厅"
+              ],
+              "subject": [
+                "家具",
+                "植物"
+              ],
+              "model": [
+                "无人"
+              ],
+              "people": [
+                "无人"
+              ],
+              "style": [
+                "现代",
+                "写实"
+              ],
+              "lighting": [
+                "自然光"
+              ],
+              "color": [
+                "暖色",
+                "高饱和"
+              ],
+              "composition": [
+                "中景",
+                "居中"
+              ],
+              "mood": [
+                "温馨",
+                "自然"
+              ],
+              "use_case": [
+                "广告",
+                "空间参考"
+              ],
+              "objects": [
+                "布艺沙发",
+                "木质茶几",
+                "绿植盆栽",
+                "落地灯"
+              ],
+              "materials": [
+                "木材",
+                "布料",
+                "陶瓷"
+              ],
+              "quality": [
+                "高清"
+              ]
+            },
+            "tags": [
+              "现代客厅",
+              "自然光效",
+              "温馨氛围",
+              "家居广告",
+              "布艺沙发",
+              "木质家具",
+              "绿植装饰",
+              "中景构图",
+              "暖色调",
+              "高清素材",
+              "空间参考图",
+              "室内设计",
+              "陶瓷花瓶",
+              "落地灯具",
+              "极简装饰",
+              "生活场景",
+              "家具陈列",
+              "家居摄影",
+              "全景视角",
+              "现代风格"
+            ],
+            "flat": [],
+            "updated_at": 1788143389164,
+            "model": "Qwen/Qwen3-235B-A22B",
+            "provider": "modelscope"
+          }
+        },
+        {
+          "id": "asset_a5d3e3811bd9",
+          "name": "ComfyUI_temp_tqgdu_00002_",
+          "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_547bb677162c_ComfyUI_temp_tqgdu_00002_.png",
+          "kind": "image",
+          "created_at": 1787715647486,
+          "registrations": {},
+          "classification": {
+            "summary": "现代风格客厅场景展示",
+            "categories": {
+              "environment": [
+                "室内"
+              ],
+              "scene": [
+                "客厅"
+              ],
+              "space": [
+                "客厅"
+              ],
+              "subject": [
+                "家具",
+                "室内设计"
+              ],
+              "model": [
+                "无人"
+              ],
+              "people": [
+                "无人"
+              ],
+              "style": [
+                "现代",
+                "极简"
+              ],
+              "lighting": [
+                "自然光"
+              ],
+              "color": [
+                "莫兰迪",
+                "低饱和"
+              ],
+              "composition": [
+                "中景",
+                "居中"
+              ],
+              "mood": [
+                "温馨",
+                "高级"
+              ],
+              "use_case": [
+                "广告",
+                "空间参考"
+              ],
+              "objects": [
+                "沙发",
+                "茶几",
+                "落地灯",
+                "装饰画"
+              ],
+              "materials": [
+                "木材",
+                "布料",
+                "玻璃"
+              ],
+              "quality": [
+                "高清"
+              ]
+            },
+            "tags": [
+              "现代客厅",
+              "极简风格",
+              "自然光照明",
+              "莫兰迪色调",
+              "家具展示",
+              "空间布局",
+              "高清素材",
+              "室内设计参考",
+              "木质材质",
+              "布艺沙发"
+            ],
+            "flat": [],
+            "updated_at": 1788143404422,
+            "model": "Qwen/Qwen3-235B-A22B",
+            "provider": "modelscope"
+          }
+        },
+        {
+          "id": "asset_893f67ed0e81",
+          "name": "ComfyUI_temp_mmdey_00002_",
+          "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_a56ccb6822f7_ComfyUI_temp_mmdey_00002_.png",
+          "kind": "image",
+          "created_at": 1787712004437,
+          "registrations": {},
+          "classification": {
+            "summary": "现代风格客厅全景展示",
+            "categories": {
+              "environment": [
+                "室内"
+              ],
+              "scene": [
+                "室内"
+              ],
+              "space": [
+                "客厅"
+              ],
+              "subject": [
+                "家具"
+              ],
+              "model": [
+                "无人"
+              ],
+              "people": [
+                "无人"
+              ],
+              "style": [
+                "现代"
+              ],
+              "lighting": [
+                "自然光"
+              ],
+              "color": [
+                "暖色"
+              ],
+              "composition": [
+                "远景"
+              ],
+              "mood": [
+                "温馨"
+              ],
+              "use_case": [
+                "电商主图"
+              ],
+              "objects": [
+                "沙发",
+                "茶几",
+                "电视柜",
+                "绿植"
+              ],
+              "materials": [
+                "木材",
+                "布料"
+              ],
+              "quality": [
+                "高清"
+              ]
+            },
+            "tags": [
+              "现代客厅",
+              "暖色调",
+              "自然光",
+              "沙发组合",
+              "木质家具",
+              "布艺材质",
+              "全景构图",
+              "电商素材",
+              "家居装饰",
+              "高清图片"
+            ],
+            "flat": [],
+            "updated_at": 1788143429572,
+            "model": "Qwen/Qwen3-235B-A22B",
+            "provider": "modelscope"
+          }
+        },
+        {
+          "id": "asset_7d61933f8d6a",
+          "name": "online_ef4fe75359",
+          "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_529bfdf731c4_online_ef4fe75359.jpg",
+          "kind": "image",
+          "created_at": 1787302868992,
+          "registrations": {},
+          "classification": {
+            "summary": "现代风格客厅空间展示",
+            "categories": {
+              "environment": [
+                "室内",
+                "商业空间"
+              ],
+              "scene": [
+                "客厅",
+                "室内"
+              ],
+              "space": [
+                "客厅",
+                "商业空间"
+              ],
+              "subject": [
+                "家具",
+                "室内空间"
+              ],
+              "model": [
+                "无人"
+              ],
+              "people": [
+                "无人"
+              ],
+              "style": [
+                "现代",
+                "写实",
+                "电商"
+              ],
+              "lighting": [
+                "自然光",
+                "柔光"
+              ],
+              "color": [
+                "暖色",
+                "莫兰迪"
+              ],
+              "composition": [
+                "中景",
+                "居中",
+                "对称"
+              ],
+              "mood": [
+                "温馨",
+                "高级",
+                "自然"
+              ],
+              "use_case": [
+                "空间参考",
+                "电商主图",
+                "背景"
+              ],
+              "objects": [
+                "沙发",
+                "茶几",
+                "电视柜",
+                "绿植",
+                "挂画"
+              ],
+              "materials": [
+                "布料",
+                "木材",
+                "玻璃"
+              ],
+              "quality": [
+                "高清"
+              ]
+            },
+            "tags": [
+              "现代客厅",
+              "北欧风格",
+              "家居空间",
+              "沙发组合",
+              "自然采光",
+              "商业拍摄",
+              "电商素材",
+              "空间布局",
+              "软装搭配",
+              "室内设计"
+            ],
+            "flat": [],
+            "updated_at": 1788143417982,
+            "model": "Qwen/Qwen3-235B-A22B",
+            "provider": "modelscope"
+          }
+        }
+      ],
+      "dir": "角色"
+    },
+    {
+      "id": "scenes",
+      "name": "场景",
+      "type": "image",
+      "items": [],
+      "dir": "场景"
+    },
+    {
+      "id": "workflows",
+      "name": "工作流",
+      "type": "workflow",
+      "items": []
+    }
+  ],
+  "updated_at": 1788144266860
+}

@@ -1,0 +1,271 @@
+{
+  "59": {
+    "inputs": {
+      "caption_type": "Descriptive",
+      "caption_length": "any",
+      "max_new_tokens": 512,
+      "top_p": 0.9,
+      "top_k": 0,
+      "temperature": 0.6,
+      "user_prompt": "",
+      "image": [
+        "85",
+        0
+      ],
+      "joycaption_beta1_model": [
+        "72",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: JoyCaptionBeta1",
+    "_meta": {
+      "title": "LayerUtility: JoyCaption Beta One (Advance)"
+    }
+  },
+  "72": {
+    "inputs": {
+      "model": "fancyfeast/llama-joycaption-beta-one-hf-llava",
+      "quantization_mode": "bf16",
+      "device": "cuda"
+    },
+    "class_type": "LayerUtility: LoadJoyCaptionBeta1Model",
+    "_meta": {
+      "title": "LayerUtility: Load JoyCaption Beta One Model (Advance)"
+    }
+  },
+  "73": {
+    "inputs": {
+      "seed": 422685987219827,
+      "steps": 9,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "92",
+        0
+      ],
+      "positive": [
+        "77",
+        0
+      ],
+      "negative": [
+        "80",
+        0
+      ],
+      "latent_image": [
+        "82",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "K采样器"
+    }
+  },
+  "75": {
+    "inputs": {
+      "Text": ""
+    },
+    "class_type": "Text (Any)",
+    "_meta": {
+      "title": "Text (Any input)🧸"
+    }
+  },
+  "76": {
+    "inputs": {
+      "linebreak_addition": "false",
+      "delimiter": "",
+      "text0": [
+        "59",
+        0
+      ],
+      "text1": [
+        "75",
+        0
+      ]
+    },
+    "class_type": "MultiTextConcatenate",
+    "_meta": {
+      "title": "多文本联合"
+    }
+  },
+  "77": {
+    "inputs": {
+      "text": [
+        "76",
+        0
+      ],
+      "clip": [
+        "84",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP文本编码"
+    }
+  },
+  "80": {
+    "inputs": {
+      "conditioning": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "条件零化"
+    }
+  },
+  "82": {
+    "inputs": {
+      "width": [
+        "89",
+        0
+      ],
+      "height": [
+        "89",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptySD3LatentImage",
+    "_meta": {
+      "title": "空Latent图像（SD3）"
+    }
+  },
+  "83": {
+    "inputs": {
+      "unet_name": "z_image_turbo\\z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNet加载器"
+    }
+  },
+  "84": {
+    "inputs": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "加载CLIP"
+    }
+  },
+  "85": {
+    "inputs": {
+      "image": "0936a61893648e6f71832a0b497984854327d1b03750a-fj4LjX_fw1200.jfif"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "加载图像"
+    }
+  },
+  "87": {
+    "inputs": {
+      "samples": [
+        "73",
+        0
+      ],
+      "vae": [
+        "88",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE解码"
+    }
+  },
+  "88": {
+    "inputs": {
+      "vae_name": "ae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "加载VAE"
+    }
+  },
+  "89": {
+    "inputs": {
+      "image": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "90": {
+    "inputs": {
+      "images": [
+        "87",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "92": {
+    "inputs": {
+      "shift": 3,
+      "model": [
+        "93",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingAuraFlow",
+    "_meta": {
+      "title": "采样算法（AuraFlow）"
+    }
+  },
+  "93": {
+    "inputs": {
+      "lora_name": "z_image_turbo_distill_patch_lora_bf16.safetensors",
+      "strength_model": 0.3,
+      "model": [
+        "83",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoRA加载器（仅模型）"
+    }
+  },
+  "103": {
+    "inputs": {
+      "text_0": "This is a highly detailed, digital CGI portrait of a young Asian woman with fair skin and delicate features. She has long, straight black hair adorned with white, ornate hairpieces that resemble wings on either side of her head. Her eyes are large, almond-shaped, and a striking shade of blue, with subtle makeup enhancing her natural beauty. She wears a light teal, silk-like dress with intricate, swirling embroidery along the neckline and a V-shaped cut that accentuates her modest bust. The dress has sheer, flowing sleeves that add a sense of ethereal grace to her appearance. Around her neck, she wears a red cord necklace with a small, white pendant. The background is a deep, solid black, which makes her light-colored dress and pale skin stand out prominently. The lighting is soft, with a blue-green hue that highlights the contours of her face and the texture of her dress. Her expression is serene and slightly melancholic, with her arms crossed gently in front of her. The overall style of the image is realistic with a slight fantasy or ethereal quality, reminiscent of contemporary digital art often used in video games or fantasy novels.",
+      "text": [
+        "76",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "105": {
+    "inputs": {
+      "size": 1280,
+      "mode": true,
+      "images": [
+        "85",
+        0
+      ]
+    },
+    "class_type": "easy imageScaleDownToSize",
+    "_meta": {
+      "title": "图像缩小（按边）"
+    }
+  }
+}

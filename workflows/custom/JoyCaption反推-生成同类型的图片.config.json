@@ -1,0 +1,75 @@
+{
+  "title": "custom/JoyCaption反推-生成同类型的图片",
+  "fields": [
+    {
+      "id": "f_2pxta80",
+      "node": "85",
+      "input": "image",
+      "name": "图片",
+      "type": "image",
+      "default": "0936a61893648e6f71832a0b497984854327d1b03750a-fj4LjX_fw1200.jfif",
+      "min": null,
+      "max": null,
+      "step": null,
+      "options": [],
+      "random_enabled": false
+    },
+    {
+      "id": "f_pqs7a9o",
+      "node": "75",
+      "input": "Text",
+      "name": "Text",
+      "type": "textarea",
+      "default": "",
+      "min": null,
+      "max": null,
+      "step": null,
+      "options": [],
+      "random_enabled": false
+    },
+    {
+      "id": "f_4qj874m",
+      "node": "82",
+      "input": "batch_size",
+      "name": "批量大小",
+      "type": "number",
+      "default": 1,
+      "min": 0.0,
+      "max": 10.0,
+      "step": 0.1,
+      "options": [],
+      "random_enabled": false
+    },
+    {
+      "id": "f_a79j9y6",
+      "node": "105",
+      "input": "size",
+      "name": "size",
+      "type": "number",
+      "default": 1280,
+      "min": 0.0,
+      "max": 2560.0,
+      "step": 1.0,
+      "options": [],
+      "random_enabled": false
+    }
+  ],
+  "mini_cards": {
+    "prompt": {
+      "x": 24,
+      "y": 30
+    },
+    "image": {
+      "x": 24,
+      "y": 210
+    },
+    "custom": {
+      "x": 280,
+      "y": 78
+    },
+    "output": {
+      "x": 540,
+      "y": 120
+    }
+  }
+}

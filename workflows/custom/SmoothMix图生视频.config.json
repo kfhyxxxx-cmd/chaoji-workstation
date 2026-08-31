@@ -1,0 +1,49 @@
+{
+  "title": "custom/SmoothMix图生视频",
+  "fields": [
+    {
+      "id": "f_ihfb06e",
+      "node": "75",
+      "input": "image",
+      "name": "图片",
+      "type": "image",
+      "default": "ScreenShot_2026-05-15_113933_314.png",
+      "min": null,
+      "max": null,
+      "step": null,
+      "options": [],
+      "random_enabled": false
+    },
+    {
+      "id": "f_2dky18l",
+      "node": "6",
+      "input": "text",
+      "name": "提示词文本",
+      "type": "textarea",
+      "default": "",
+      "min": null,
+      "max": null,
+      "step": null,
+      "options": [],
+      "random_enabled": false
+    }
+  ],
+  "mini_cards": {
+    "prompt": {
+      "x": 24,
+      "y": 30
+    },
+    "image": {
+      "x": 24,
+      "y": 210
+    },
+    "custom": {
+      "x": 280,
+      "y": 78
+    },
+    "output": {
+      "x": 540,
+      "y": 120
+    }
+  }
+}
