@@ -173,7 +173,7 @@ MODELSCOPE_RAW_ROOT = ""
 MODELSCOPE_FILE_API_ROOT = "https://modelscope.cn/api/v1/models/kfhyxxxx/chaoji-workstation/repo?Revision=master&FilePath="
 MODELSCOPE_VERSION_URL = "https://modelscope.cn/api/v1/models/kfhyxxxx/chaoji-workstation/repo?Revision=master&FilePath=VERSION"
 MODELSCOPE_UPDATE_NOTES_URL = ""
-MODELSCOPE_TREE_URL = "https://modelscope.cn/api/v1/models/kfhyxxxx/chaoji-workstation/repo?Revision=master&Recursive=True"
+MODELSCOPE_TREE_URL = "https://modelscope.cn/api/v1/models/kfhyxxxx/chaoji-workstation/repo/files?Revision=master&Recursive=true"
 
 @app.on_event("startup")
 async def startup_event():
