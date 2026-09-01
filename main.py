@@ -168,12 +168,12 @@ GITHUB_VERSION_URL = "https://raw.githubusercontent.com/kfhyxxxx-cmd/chaoji-work
 GITHUB_TREE_URL = "https://api.github.com/repos/kfhyxxxx-cmd/chaoji-workstation/git/trees/master?recursive=1"
 GITHUB_RAW_ROOT = "https://raw.githubusercontent.com/kfhyxxxx-cmd/chaoji-workstation/master"
 GITHUB_UPDATE_NOTES_URL = ""
-MODELSCOPE_REPO_URL = ""
+MODELSCOPE_REPO_URL = "https://modelscope.cn/models/kfhyxxxx/chaoji-workstation"
 MODELSCOPE_RAW_ROOT = ""
-MODELSCOPE_FILE_API_ROOT = ""
-MODELSCOPE_VERSION_URL = ""
+MODELSCOPE_FILE_API_ROOT = "https://modelscope.cn/api/v1/models/kfhyxxxx/chaoji-workstation/repo?Revision=master&FilePath="
+MODELSCOPE_VERSION_URL = "https://modelscope.cn/api/v1/models/kfhyxxxx/chaoji-workstation/repo?Revision=master&FilePath=VERSION"
 MODELSCOPE_UPDATE_NOTES_URL = ""
-MODELSCOPE_TREE_URL = ""
+MODELSCOPE_TREE_URL = "https://modelscope.cn/api/v1/models/kfhyxxxx/chaoji-workstation/repo?Revision=master&Recursive=True"
 
 @app.on_event("startup")
 async def startup_event():
