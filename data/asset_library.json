@@ -12,6 +12,14 @@
           "type": "image",
           "items": [
             {
+              "id": "asset_ecbf6774aeb2",
+              "name": "online_1c161ed4a5",
+              "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_de7bf57e46b6_online_1c161ed4a5.jpg",
+              "kind": "image",
+              "created_at": 1788229104717,
+              "registrations": {}
+            },
+            {
               "id": "asset_d95a280300e7",
               "name": "online_83fd92a919",
               "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_1a48a9ecdd2f_online_83fd92a919.jpg",
@@ -646,6 +654,14 @@
       "type": "image",
       "items": [
         {
+          "id": "asset_ecbf6774aeb2",
+          "name": "online_1c161ed4a5",
+          "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_de7bf57e46b6_online_1c161ed4a5.jpg",
+          "kind": "image",
+          "created_at": 1788229104717,
+          "registrations": {}
+        },
+        {
           "id": "asset_d95a280300e7",
           "name": "online_83fd92a919",
           "url": "/assets/library/%E8%A7%92%E8%89%B2/lib_1a48a9ecdd2f_online_83fd92a919.jpg",
@@ -1271,5 +1287,5 @@
       "items": []
     }
   ],
-  "updated_at": 1788144266860
+  "updated_at": 1788229105731
 }
