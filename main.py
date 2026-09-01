@@ -163,10 +163,10 @@ class ConnectionManager:
 manager = ConnectionManager()
 GLOBAL_LOOP = None
 APP_VERSION = "2026.06.03"
-GITHUB_REPO_URL = ""
-GITHUB_VERSION_URL = ""
-GITHUB_TREE_URL = ""
-GITHUB_RAW_ROOT = ""
+GITHUB_REPO_URL = "https://github.com/kfhyxxxx-cmd/chaoji-workstation"
+GITHUB_VERSION_URL = "https://raw.githubusercontent.com/kfhyxxxx-cmd/chaoji-workstation/master/VERSION"
+GITHUB_TREE_URL = "https://api.github.com/repos/kfhyxxxx-cmd/chaoji-workstation/git/trees/master?recursive=1"
+GITHUB_RAW_ROOT = "https://raw.githubusercontent.com/kfhyxxxx-cmd/chaoji-workstation/master"
 GITHUB_UPDATE_NOTES_URL = ""
 MODELSCOPE_REPO_URL = ""
 MODELSCOPE_RAW_ROOT = ""
@@ -195,6 +195,11 @@ async def startup_event():
         await asyncio.to_thread(migrate_mislabeled_image_extensions)
     except Exception as exc:
         print(f"纠正图片扩展名失败: {exc}")
+    # 启动后后台检查更新
+    try:
+        Thread(target=startup_update_check, daemon=True).start()
+    except Exception as exc:
+        print(f"启动更新检查失败: {exc}")
 
 @app.websocket("/ws/stats")
 async def websocket_endpoint(websocket: WebSocket, client_id: str = None):
@@ -2028,6 +2033,29 @@ def check_update():
         "update_available": update_available,
         "reachable": bool(github["ok"] or modelscope["ok"]),
     }
+
+# 启动时后台检查更新结果，前端 /api/startup-update 读取
+_startup_update_result: Dict[str, Any] = {}
+
+def startup_update_check():
+    global _startup_update_result
+    try:
+        current = current_app_version()
+        item = fetch_remote_version(GITHUB_VERSION_URL, timeout=5.0)
+        item["source"] = "github"
+        update_available = bool(item["ok"] and item["version"] and version_gt(item["version"], current))
+        _startup_update_result = {
+            "current": current,
+            "latest": item,
+            "update_available": update_available,
+            "checked": True,
+        }
+    except Exception as exc:
+        _startup_update_result = {"checked": True, "error": str(exc), "update_available": False}
+
+@app.get("/api/startup-update")
+def get_startup_update():
+    return _startup_update_result or {"checked": False, "update_available": False}
 
 def update_allowed_file(path: str) -> bool:
     path = str(path or "").replace("\\", "/").lstrip("/")
