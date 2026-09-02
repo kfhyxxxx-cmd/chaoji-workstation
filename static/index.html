@@ -2421,14 +2421,28 @@
                         : updateUiText(`${sourceName} 更新节点可用，可以开始更新。`, `${sourceName} update endpoints are reachable.`)
                 );
             } else {
-                setUpdateSummary(
-                    'fail',
-                    updateUiText(`${sourceName} 下载源不可用`, `${sourceName} source unreachable`),
-                    updateUiText(
-                        `当前网络无法访问 ${sourceName} 必需节点。请切换下载源，或检查代理、DNS 后重试。`,
-                        `This network cannot reach required ${sourceName} endpoints. Switch source, or check proxy/DNS and try again.`
-                    )
-                );
+                const otherSource = updateSource === 'github' ? 'modelscope' : 'github';
+                const otherName = otherSource === 'github' ? 'GitHub' : 'ModelScope';
+                const otherOk = (updateConnectivityResult.sources || {})[otherSource]?.ok;
+                if(otherOk) {
+                    setUpdateSummary(
+                        'warn',
+                        updateUiText(`${sourceName} 下载源不可用，${otherName} 可用`, `${sourceName} unreachable, ${otherName} reachable`),
+                        updateUiText(
+                            `当前网络无法访问 ${sourceName}，但 ${otherName} 下载源可用。建议切换到 ${otherName} 后更新。`,
+                            `${sourceName} is unreachable, but ${otherName} is available. Switch to ${otherName} and try again.`
+                        )
+                    );
+                } else {
+                    setUpdateSummary(
+                        'fail',
+                        updateUiText(`${sourceName} 下载源不可用`, `${sourceName} source unreachable`),
+                        updateUiText(
+                            `当前网络无法访问 ${sourceName} 必需节点。请切换下载源，或检查代理、DNS 后重试。`,
+                            `This network cannot reach required ${sourceName} endpoints. Switch source, or check proxy/DNS and try again.`
+                        )
+                    );
+                }
             }
             renderConnectivityList(updateConnectivityResult?.results || []);
         }
