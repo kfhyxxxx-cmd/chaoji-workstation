@@ -2306,11 +2306,13 @@
             const github = sources.github || {};
             const ms = sources.modelscope || {};
             return [
-                { name:'GitHub 主页', url:'https://github.com/', source:'github', required: true },
-                { name:'GitHub RAW 节点', url:'https://raw.githubusercontent.com/kfhyxxxx-cmd/chaoji-workstation/master/README.md', source:'github', required: true },
-                { name:'ModelScope 主页', url:'https://modelscope.cn/', source:'modelscope', required: true },
-                { name:'ModelScope RAW 节点', url:'https://modelscope.cn/api/v1/models/kfhyxxxx/chaoji-workstation/repo?Revision=master&FilePath=README.md', source:'modelscope', required: true },
-                { name:'Google 连通性', url:'https://www.google.com/generate_204', source:'reference' },
+                { name:'GitHub 更新列表', source:'github', required: true },
+                { name:'GitHub 版本文件', source:'github', required: true },
+                { name:'GitHub 主页', source:'github', required: false },
+                { name:'ModelScope 版本文件', source:'modelscope', required: true },
+                { name:'ModelScope 空间页面', source:'modelscope', required: false },
+                { name:'ModelScope 主页', source:'modelscope', required: false },
+                { name:'Google 连通性', source:'reference', required: false },
             ];
         }
 
