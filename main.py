@@ -2175,9 +2175,15 @@ def modelscope_update_file_list() -> List[str]:
     return sorted(set(out))
 
 def modelscope_file_bytes(rel: str) -> bytes:
+    import base64
     url = MODELSCOPE_FILE_API_ROOT + urllib.parse.quote(rel, safe="/")
     resp = github_get(url, headers={"User-Agent": "Infinite-Canvas-Updater"}, timeout=60)
-    return resp.content
+    resp.raise_for_status()
+    data = resp.json()
+    if data.get("Code") != 200 or not data.get("Data"):
+        raise RuntimeError(f"ModelScope 文件下载失败: {rel}")
+    content = data["Data"].get("Content", "")
+    return base64.b64decode(content.encode("utf-8"))
 
 def download_modelscope_update_files(staging_root: str) -> List[str]:
     # 用 HTTP 仓库文件 API 下载（与 GitHub raw 同样思路），不依赖本机安装 Git。
