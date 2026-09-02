@@ -175,6 +175,33 @@ MODELSCOPE_VERSION_URL = "https://modelscope.cn/api/v1/models/kfhyxxxx/chaoji-wo
 MODELSCOPE_UPDATE_NOTES_URL = ""
 MODELSCOPE_TREE_URL = "https://modelscope.cn/api/v1/models/kfhyxxxx/chaoji-workstation/repo/files?Revision=master&Recursive=true"
 
+def ensure_desktop_shortcut():
+    """每次启动检查桌面快捷方式，没有就创建"""
+    try:
+        desktop = os.path.join(os.environ.get("USERPROFILE", ""), "Desktop")
+        if not desktop or not os.path.isdir(desktop):
+            return
+        shortcut_path = os.path.join(desktop, "Infinite Canvas.lnk")
+        if os.path.exists(shortcut_path):
+            return
+        app_dir = os.path.dirname(os.path.abspath(__file__))
+        target = os.path.join(app_dir, "run.bat")
+        icon = os.path.join(app_dir, "icon.ico")
+        if not os.path.exists(target):
+            return
+        ps = f'''
+$WshShell = New-Object -ComObject WScript.Shell
+$Shortcut = $WshShell.CreateShortcut("{shortcut_path}")
+$Shortcut.TargetPath = "{target}"
+$Shortcut.WorkingDirectory = "{app_dir}"
+$Shortcut.IconLocation = "{icon}"
+$Shortcut.Save()
+'''
+        subprocess.run(["powershell", "-Command", ps], capture_output=True, timeout=15)
+        print(f"桌面快捷方式已创建: {shortcut_path}")
+    except Exception as exc:
+        print(f"创建桌面快捷方式失败: {exc}")
+
 @app.on_event("startup")
 async def startup_event():
     global GLOBAL_LOOP
@@ -195,6 +222,11 @@ async def startup_event():
         await asyncio.to_thread(migrate_mislabeled_image_extensions)
     except Exception as exc:
         print(f"纠正图片扩展名失败: {exc}")
+    # 确保桌面快捷方式存在
+    try:
+        await asyncio.to_thread(ensure_desktop_shortcut)
+    except Exception as exc:
+        print(f"创建桌面快捷方式失败: {exc}")
     # 启动后后台检查更新
     try:
         Thread(target=startup_update_check, daemon=True).start()
