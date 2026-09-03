@@ -162,7 +162,7 @@ class ConnectionManager:
 
 manager = ConnectionManager()
 GLOBAL_LOOP = None
-APP_VERSION = "2026.06.03"
+APP_VERSION = "2026.09.03"
 GITHUB_REPO_URL = "https://github.com/kfhyxxxx-cmd/chaoji-workstation"
 GITHUB_VERSION_URL = "https://raw.githubusercontent.com/kfhyxxxx-cmd/chaoji-workstation/master/VERSION"
 GITHUB_TREE_URL = "https://api.github.com/repos/kfhyxxxx-cmd/chaoji-workstation/git/trees/master?recursive=1"
@@ -176,29 +176,36 @@ MODELSCOPE_UPDATE_NOTES_URL = "https://modelscope.cn/api/v1/models/kfhyxxxx/chao
 MODELSCOPE_TREE_URL = "https://modelscope.cn/api/v1/models/kfhyxxxx/chaoji-workstation/repo/files?Revision=master&Recursive=true"
 
 def ensure_desktop_shortcut():
-    """每次启动检查桌面快捷方式，没有就创建"""
+    """每次启动检查桌面快捷方式，没有就创建（静默启动，不弹黑窗）"""
     try:
         desktop = os.path.join(os.environ.get("USERPROFILE", ""), "Desktop")
         if not desktop or not os.path.isdir(desktop):
             return
         shortcut_path = os.path.join(desktop, "Infinite Canvas.lnk")
-        if os.path.exists(shortcut_path):
-            return
         app_dir = os.path.dirname(os.path.abspath(__file__))
-        target = os.path.join(app_dir, "run.bat")
+        vbs_path = os.path.join(app_dir, "run.vbs")
         icon = os.path.join(app_dir, "icon.ico")
-        if not os.path.exists(target):
+        if not os.path.exists(vbs_path):
             return
+        # 如果快捷方式已存在但指向旧版 run.bat，删掉重建
+        if os.path.exists(shortcut_path):
+            try:
+                os.remove(shortcut_path)
+            except Exception:
+                pass
+        wscript = os.path.join(os.environ.get("SystemRoot", r"C:\Windows"), "System32", "wscript.exe")
         ps = f'''
 $WshShell = New-Object -ComObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("{shortcut_path}")
-$Shortcut.TargetPath = "{target}"
+$Shortcut.TargetPath = "{wscript}"
+$Shortcut.Arguments = '"{vbs_path}"'
 $Shortcut.WorkingDirectory = "{app_dir}"
 $Shortcut.IconLocation = "{icon}"
+$Shortcut.WindowStyle = 7
 $Shortcut.Save()
 '''
         subprocess.run(["powershell", "-Command", ps], capture_output=True, timeout=15)
-        print(f"桌面快捷方式已创建: {shortcut_path}")
+        print(f"桌面快捷方式已创建（静默模式）: {shortcut_path}")
     except Exception as exc:
         print(f"创建桌面快捷方式失败: {exc}")
 
