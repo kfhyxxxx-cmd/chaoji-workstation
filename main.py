@@ -172,7 +172,7 @@ MODELSCOPE_REPO_URL = "https://modelscope.cn/models/kfhyxxxx/chaoji-workstation"
 MODELSCOPE_RAW_ROOT = ""
 MODELSCOPE_FILE_API_ROOT = "https://modelscope.cn/api/v1/models/kfhyxxxx/chaoji-workstation/repo?Revision=master&FilePath="
 MODELSCOPE_VERSION_URL = "https://modelscope.cn/api/v1/models/kfhyxxxx/chaoji-workstation/repo?Revision=master&FilePath=VERSION"
-MODELSCOPE_UPDATE_NOTES_URL = ""
+MODELSCOPE_UPDATE_NOTES_URL = "https://modelscope.cn/api/v1/models/kfhyxxxx/chaoji-workstation/repo?Revision=master&FilePath=UPDATE.md"
 MODELSCOPE_TREE_URL = "https://modelscope.cn/api/v1/models/kfhyxxxx/chaoji-workstation/repo/files?Revision=master&Recursive=true"
 
 def ensure_desktop_shortcut():
@@ -1653,30 +1653,33 @@ def safe_update_notes(payload: Any, version: str = "") -> Dict[str, Any]:
         "items": clean_items,
     }
 
+def parse_update_md_text(text: str, version: str = "") -> List[Dict[str, str]]:
+    """解析 UPDATE.md 文本内容生成 update_notes items"""
+    items: List[Dict[str, str]] = []
+    for line in text.split("\n"):
+        cleaned = line.strip()
+        if not cleaned:
+            continue
+        cleaned = re.sub(r"^#{1,6}\s*", "", cleaned)
+        cleaned = re.sub(r"^[-*+]\s*", "", cleaned)
+        cleaned = re.sub(r"^>+\s*", "", cleaned)
+        cleaned = cleaned.strip()
+        if not cleaned:
+            continue
+        if re.match(r"^v?\d[\d.]*", cleaned) and not re.search(r"[^\d.]", cleaned):
+            continue
+        if re.match(r"^[🔧✅🐛🚀📝💡⚠️🎉🔥]+$", cleaned):
+            continue
+        items.append({"text": cleaned})
+    return items
+
 def parse_update_md(path: str, version: str = "") -> Dict[str, Any]:
-    """解析 UPDATE.md 生成 update_notes 结构"""
+    """解析 UPDATE.md 文件生成 update_notes 结构"""
     items: List[Dict[str, str]] = []
     if not os.path.exists(path):
         return {"version": version, "updated_at": "", "items": items}
     with open(path, "r", encoding="utf-8") as f:
-        for line in f:
-            text = line.strip()
-            if not text:
-                continue
-            # 去掉 Markdown 标记符（## 、- 、✅ 等）
-            cleaned = re.sub(r"^#{1,6}\s*", "", text)
-            cleaned = re.sub(r"^[-*+]\s*", "", cleaned)
-            cleaned = re.sub(r"^>+\s*", "", cleaned)
-            cleaned = cleaned.strip()
-            if not cleaned:
-                continue
-            # 跳过纯版本号标题行
-            if re.match(r"^v?\d[\d.]*", cleaned) and not re.search(r"[^\d.]", cleaned):
-                continue
-            # 跳过纯符号装饰行
-            if re.match(r"^[🔧✅🐛🚀📝💡⚠️🎉🔥]+$", cleaned):
-                continue
-            items.append({"text": cleaned})
+        items = parse_update_md_text(f.read(), version)
     return {"version": version, "updated_at": "", "items": items}
 
 def read_local_update_notes(version: str = "") -> Dict[str, Any]:
@@ -1704,10 +1707,21 @@ def fetch_remote_update_notes(url: str, version: str = "", timeout: float = 5.0)
             proxies=urllib.request.getproxies() or None,
         )
         if 200 <= resp.status_code < 400:
-            payload = json.loads(resp.content.decode("utf-8", errors="replace"))
-            notes = safe_update_notes(payload, version)
-            info.update(notes)
-            info["ok"] = True
+            content = resp.content.decode("utf-8", errors="replace")
+            # 尝试 JSON 格式
+            try:
+                payload = json.loads(content)
+                notes = safe_update_notes(payload, version)
+                info.update(notes)
+                info["ok"] = True
+            except json.JSONDecodeError:
+                # fallback：Markdown 格式（ModelScope 直接返回文件内容）
+                items = parse_update_md_text(content, version)
+                if items:
+                    info["items"] = items
+                    info["ok"] = True
+                else:
+                    info["error"] = "更新说明内容为空"
         else:
             info["error"] = f"HTTP {resp.status_code}"
     except Exception as exc:
