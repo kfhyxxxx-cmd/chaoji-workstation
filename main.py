@@ -1653,6 +1653,32 @@ def safe_update_notes(payload: Any, version: str = "") -> Dict[str, Any]:
         "items": clean_items,
     }
 
+def parse_update_md(path: str, version: str = "") -> Dict[str, Any]:
+    """解析 UPDATE.md 生成 update_notes 结构"""
+    items: List[Dict[str, str]] = []
+    if not os.path.exists(path):
+        return {"version": version, "updated_at": "", "items": items}
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            text = line.strip()
+            if not text:
+                continue
+            # 去掉 Markdown 标记符（## 、- 、✅ 等）
+            cleaned = re.sub(r"^#{1,6}\s*", "", text)
+            cleaned = re.sub(r"^[-*+]\s*", "", cleaned)
+            cleaned = re.sub(r"^>+\s*", "", cleaned)
+            cleaned = cleaned.strip()
+            if not cleaned:
+                continue
+            # 跳过纯版本号标题行
+            if re.match(r"^v?\d[\d.]*", cleaned) and not re.search(r"[^\d.]", cleaned):
+                continue
+            # 跳过纯符号装饰行
+            if re.match(r"^[🔧✅🐛🚀📝💡⚠️🎉🔥]+$", cleaned):
+                continue
+            items.append({"text": cleaned})
+    return {"version": version, "updated_at": "", "items": items}
+
 def read_local_update_notes(version: str = "") -> Dict[str, Any]:
     try:
         path = update_notes_path()
@@ -1661,7 +1687,9 @@ def read_local_update_notes(version: str = "") -> Dict[str, Any]:
                 return safe_update_notes(json.load(f), version)
     except Exception:
         pass
-    return {"version": version or current_app_version(), "updated_at": "", "items": []}
+    # fallback：解析本地 UPDATE.md
+    md_path = os.path.join(BASE_DIR, "UPDATE.md")
+    return parse_update_md(md_path, version or current_app_version())
 
 def fetch_remote_update_notes(url: str, version: str = "", timeout: float = 5.0) -> Dict[str, Any]:
     info: Dict[str, Any] = {"ok": False, "error": "", "url": url, "version": version, "items": []}
@@ -2093,7 +2121,7 @@ def update_allowed_file(path: str) -> bool:
     path = str(path or "").replace("\\", "/").lstrip("/")
     if not path or any(part in {"", ".", ".."} for part in path.split("/")):
         return False
-    return path in {"main.py", "VERSION"} or path.startswith("static/")
+    return path in {"main.py", "VERSION", "UPDATE.md"} or path.startswith("static/")
 
 # 缓存 GitHub Tree API 响应（含 ETag），减少 60 次/h 限流压力
 GITHUB_TREE_CACHE: Dict[str, Any] = {"etag": "", "data": None, "expires_at": 0.0}
